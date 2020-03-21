@@ -214,5 +214,9 @@ pip-selfcheck.json
 
 # My ignores
 data
+images/*
 model/*
 ignored
+.vscode/
+Pipfile
+testing/*

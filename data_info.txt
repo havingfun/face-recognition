@@ -1,0 +1,220 @@
+Fetched the list of top 100 celebrities from - https://www.bollywoodhungama.com/celebrities/top-100/
+
+List of the celebs -
+Aamir Khan
+Abhay Deol
+Abhishek Bachchan
+Aftab Shivdasani
+Aishwarya Rai
+Ajay Devgn
+Akshay Kumar
+Akshaye Khanna
+Alia Bhatt
+Ameesha Patel
+Amitabh Bachchan
+Amrita Rao
+Amy Jackson
+Anil Kapoor
+Anushka Sharma
+Anushka Shetty
+Arjun Kapoor
+Arjun Rampal
+Arshad Warsi
+Asin
+Ayushmann Khurrana
+Bhumi Pednekar
+Bipasha Basu
+Bobby Deol
+Deepika Padukone
+Disha Patani
+Emraan Hashmi
+Esha Gupta
+Farhan Akhtar
+Govinda
+Hrithik Roshan
+Huma Qureshi
+Ileana D’Cruz
+Irrfan Khan
+Jacqueline Fernandez
+John Abraham
+Juhi Chawla
+Kajal Aggarwal
+Kajol
+Kangana Ranaut
+Kareena Kapoor
+Karisma Kapoor
+Kartik Aaryan
+Katrina Kaif
+Kiara Advani
+Kriti Kharbanda
+Kriti Sanon
+Kunal Khemu
+Lara Dutta
+Madhuri Dixit
+Manoj Bajpayee
+Mrunal Thakur
+Nana Patekar
+Nargis Fakhri
+Naseeruddin Shah
+Nushrat Bharucha
+Paresh Rawal
+Parineeti Chopra
+Pooja Hegde
+Prabhas
+Prachi Desai
+Preity Zinta
+Priyanka Chopra
+R Madhavan
+Rajkummar Rao
+Ranbir Kapoor
+Randeep Hooda
+Rani Mukerji
+Ranveer Singh
+Richa Chadda
+Riteish Deshmukh
+Saif Ali Khan
+Salman Khan
+Sanjay Dutt
+Sara Ali Khan
+Shah Rukh Khan
+Shahid Kapoor
+Shilpa Shetty
+Shraddha Kapoor
+Shreyas Talpade
+Shruti Haasan
+Sidharth Malhotra
+Sonakshi Sinha
+Sonam Kapoor
+Suniel Shetty
+Sunny Deol
+Sushant Singh Rajput
+Taapsee Pannu
+Tabu
+Tamannaah Bhatia
+Tiger Shroff
+Tusshar Kapoor
+Uday Chopra
+Vaani Kapoor
+Varun Dhawan
+Vicky Kaushal
+Vidya Balan
+Vivek Oberoi
+Yami Gautam
+Zareen Khan
+
+
+Extractor used for fetching images - https://github.com/arthursdays/GoogleImagesDownloader
+Manually removed the noisy images from search results to keep the best images.
+
+I have trained a face recognition system on the following image set by using MTCNN(face detection) + facenet-PyTorch(feature extraction)
+architecture from ArsFutura - https://github.com/arsfutura/face-recognition
+Their Blog - https://arsfutura.co/magazine/face-recognition-with-facenet-and-mtcnn/
+
+Validation results on the following dataset -
+
+Celeb	precision	recall	f1-score	support
+				
+Aamir_Khan	0.96	0.98	0.97	137
+Abhay_Deol	0.99	0.97	0.98	77
+Abhishek_Bachchan	0.99	0.99	0.99	104
+Aftab_Shivdasani	1	1	1	112
+Aishwarya_Rai	0.99	1	1	163
+Ajay_Devgn	0.98	1	0.99	115
+Akshay_Kumar	0.98	0.99	0.98	126
+Akshaye_Khanna	1	1	1	86
+Alia_Bhatt	0.96	0.99	0.97	166
+Ameesha_Patel	1	0.96	0.98	118
+Amitabh_Bachchan	0.99	0.99	0.99	135
+Amrita_Rao	0.99	0.98	0.99	122
+Amy_Jackson	1	1	1	123
+Anil_Kapoor	0.98	0.98	0.98	104
+Anushka_Sharma	0.95	0.93	0.94	169
+Anushka_Shetty	0.99	1	0.99	146
+Arjun_Kapoor	0.96	0.97	0.97	116
+Arjun_Rampal	0.98	0.97	0.98	102
+Arshad_Warsi	0.99	1	1	106
+Asin	1	1	1	148
+Ayushmann_Khurrana	0.99	1	1	124
+Bhumi_Pednekar	1	0.98	0.99	113
+Bipasha_Basu	0.98	0.97	0.98	124
+Bobby_Deol	0.99	1	0.99	76
+Deepika_Padukone	0.97	0.98	0.97	196
+Disha_Patani	0.96	0.99	0.97	152
+Emraan_Hashmi	1	1	1	97
+Esha_Gupta	0.98	1	0.99	115
+Farhan_Akhtar	1	1	1	80
+Govinda	0.97	0.99	0.98	79
+Hrithik_Roshan	0.98	0.99	0.98	121
+Huma_Qureshi	0.98	0.96	0.97	128
+Ileana_D’Cruz	0.96	0.97	0.97	149
+Irrfan_Khan	0.99	0.98	0.99	121
+Jacqueline_Fernandez	0.97	0.97	0.97	162
+John_Abraham	0.99	0.99	0.99	123
+Juhi_Chawla	1	1	1	117
+Kajal_Aggarwal	1	0.99	1	164
+Kajol	1	1	1	139
+Kangana_Ranaut	0.96	0.97	0.96	133
+Kareena_Kapoor	0.97	0.99	0.98	140
+Karisma_Kapoor	1	0.99	1	144
+Kartik_Aaryan	0.98	0.98	0.98	131
+Katrina_Kaif	0.97	0.97	0.97	157
+Kiara_Advani	0.97	0.99	0.98	141
+Kriti_Kharbanda	1	0.99	0.99	135
+Kriti_Sanon	0.99	0.97	0.98	155
+Kunal_Khemu	1	1	1	76
+Lara_Dutta	0.99	1	0.99	86
+Madhuri_Dixit	0.99	0.99	0.99	150
+Manoj_Bajpayee	1	1	1	100
+Mrunal_Thakur	0.93	0.96	0.94	113
+Nana_Patekar	0.99	0.98	0.98	81
+Nargis_Fakhri	1	0.99	1	124
+Naseeruddin_Shah	1	1	1	84
+Nushrat_Bharucha	0.98	0.96	0.97	113
+Paresh_Rawal	0.99	1	0.99	83
+Parineeti_Chopra	0.98	0.97	0.97	139
+Pooja_Hegde	0.92	0.89	0.91	151
+Prabhas	1	0.99	1	139
+Prachi_Desai	0.99	0.96	0.97	116
+Preity_Zinta	0.99	0.99	0.99	133
+Priyanka_Chopra	0.97	0.96	0.97	139
+R_Madhavan	1	0.99	0.99	98
+Rajkummar_Rao	1	0.99	1	105
+Ranbir_Kapoor	0.99	1	1	124
+Randeep_Hooda	0.96	0.98	0.97	114
+Rani_Mukerji	1	0.98	0.99	129
+Ranveer_Singh	0.98	0.98	0.98	126
+Richa_Chadda	0.97	0.99	0.98	118
+Riteish_Deshmukh	0.99	1	0.99	88
+Saif_Ali_Khan	0.98	0.99	0.99	104
+Salman_Khan	0.97	0.99	0.98	141
+Sanjay_Dutt	1	1	1	102
+Sara_Ali_Khan	0.98	0.99	0.99	113
+Shah_Rukh_Khan	1	1	1	120
+Shahid_Kapoor	1	0.97	0.99	145
+Shilpa_Shetty	0.99	0.98	0.98	140
+Shraddha_Kapoor	0.99	0.97	0.98	119
+Shreyas_Talpade	1	1	1	57
+Shruti_Haasan	0.98	0.99	0.99	130
+Sidharth_Malhotra	0.99	0.97	0.98	100
+Sonakshi_Sinha	1	1	1	127
+Sonam_Kapoor	0.99	0.99	0.99	138
+Suniel_Shetty	0.95	1	0.97	70
+Sunny_Deol	0.99	0.99	0.99	84
+Sushant_Singh_Rajput	0.99	0.96	0.98	105
+Taapsee_Pannu	0.99	0.99	0.99	145
+Tabu	0.98	0.99	0.99	117
+Tamannaah_Bhatia	0.97	0.98	0.98	178
+Tiger_Shroff	0.99	0.99	0.99	129
+Tusshar_Kapoor	1	0.98	0.99	62
+Uday_Chopra	1	1	1	77
+Vaani_Kapoor	0.99	0.97	0.98	154
+Varun_Dhawan	0.97	0.98	0.98	140
+Vicky_Kaushal	0.99	0.98	0.99	119
+Vidya_Balan	0.99	0.98	0.98	147
+Vivek_Oberoi	0.98	0.99	0.98	85
+Yami_Gautam	0.95	0.93	0.94	165
+Zareen_Khan	0.97	0.97	0.97	142
+
+accuracy			0.98	12175
+macro avg	0.98	0.98	0.98	12175
+weighted avg	0.98	0.98	0.98	12175

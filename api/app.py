@@ -5,6 +5,7 @@ from flask import Flask
 from flask_restplus import Api, Resource, fields, abort, inputs
 from werkzeug.datastructures import FileStorage
 from face_recognition import preprocessing
+from flask_cors import CORS
 
 face_recogniser = joblib.load('model/face_recogniser.pkl')
 preprocess = preprocessing.ExifOrientationNormalize()
@@ -12,6 +13,7 @@ preprocess = preprocessing.ExifOrientationNormalize()
 IMAGE_KEY = 'image'
 INCLUDE_PREDICTIONS_KEY = 'include_predictions'
 app = Flask(__name__)
+CORS(app)
 api = Api(app, version='0.1.0', title='Face Recognition API', doc='/docs')
 
 parser = api.parser()
